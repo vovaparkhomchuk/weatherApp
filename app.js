@@ -22,7 +22,7 @@ var Review = mongoose.model('Review', reviewSchema);
 
 
 // DataBase Config
-mongoose.connect('mongodb://127.0.0.1:27017/weather');
+mongoose.connect('mongodb://vovaparkhomchuk:admin@ds131546.mlab.com:31546/weather');
 let db = mongoose.connection;
 
 db.once('open', () => {
