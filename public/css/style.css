@@ -1,0 +1,122 @@
+body{
+	color: white;
+	text-align: center;
+	background: linear-gradient(270deg, #4837a8, #db5959);
+	background-size: 200% 200%;
+
+	-webkit-animation: AnimationName 12s ease infinite;
+	-moz-animation: AnimationName 12s ease infinite;
+	animation: AnimationName 12s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+
+.container input[type='text']{
+	border: none;
+	width: 300px;
+	margin-bottom: 20px;
+	padding: 10px 10px;
+	background-color: rgba(255,255,255);
+	border-radius: 3px;
+}
+
+.container input[type='submit']{
+	width: 300px;
+	border-radius: 0px;
+	padding: 8px 5px;
+	font-weight: lighter;
+	border-radius: 3px;
+	color: #333;
+	border: none;
+	box-shadow: 0 3px 5px 0 rgba(36,50,66,.2);
+	transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+
+.container input[type='submit'], input[type='text']:focus{
+	outline-color: #796eff;
+}
+
+.container input[type='text']:focus{
+	border-bottom-color: solid 4px #7bb0ff;
+}
+
+.container input[type='submit']:hover{
+	background-color: #796eff;
+	color: white;
+	font-weight: lighter;
+	box-shadow: 0 11px 12px 0 rgba(36,50,66,.12);
+}
+.w_tit{
+	font-weight: lighter;
+	/*border: solid 1px white; */
+	width: 280px; 
+	margin: auto; 
+	padding: 12px 0px;
+	background: linear-gradient(270deg, #db5959, #4837a8);
+	background-size: 200% 200%;
+
+	-webkit-animation: AnimationName 12s ease infinite;
+	-moz-animation: AnimationName 12s ease infinite;
+	animation: AnimationName 12s ease infinite;
+}
+
+.mn{
+	width: 360px;
+	margin: auto;
+	background-color: rgba(255,255,255,0.4);
+	padding: 20px 0px;
+	border-radius: 3px;
+}
+.rr{
+	width: 360px;
+	margin: auto;
+}
+
+.rr ul{
+  list-style-type: none;
+  margin: 0px auto;
+}
+
+.lili{
+	border: solid 2px white;
+	padding: 5px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
+
+
+.back{
+	display: block;
+	margin: auto;
+	background-color: white;
+	width: 300px;
+	border-radius: 0px;
+	padding: 8px 5px;
+	font-weight: lighter;
+	border-radius: 3px;
+	color: #333;
+	border: none;
+	box-shadow: 0 3px 5px 0 rgba(36,50,66,.2);
+	transition: box-shadow 0.3s ease-in-out;
+}
+.back:hover{
+	background-color: #796eff;
+	color: white;
+	font-weight: lighter;
+	box-shadow: 0 11px 12px 0 rgba(36,50,66,.12);
+}

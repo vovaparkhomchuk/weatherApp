@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <script src="/js/script.js"></script>
+  </head>
+  <body>
+    <br>
+    <br>
+    <div class="container">
+      <p>
+        <h1 class="w_tit">Weather App</h1>
+      </p>
+
+      <% if(weather == null){ %>
+        <div class="mn">
+          <fieldset>
+            <form action="/" method="post">
+              <input name="city" type="text" class="ghost-input fir_inp" placeholder="Enter a City" required><br>
+              <input type="submit" class="ghost-button fir_sub" value="Get Weather">
+            </form>
+          </fieldset>
+        </div>
+      <% } %>
+
+    	<% if(weather !== null){ %>
+    	  <p>
+          <h3><%= weather %></h3>
+        </p>
+        <fieldset>
+          <form action="/review" method="post">
+            <input name="review" type="text" class="ghost-input" placeholder="Enter your review about the weather" required><br>
+            <input type="submit" class="ghost-button" value="Send a review">
+          </form>
+        </fieldset>
+
+        <br><br>
+        <div class="rr">
+          <h3>Reviews for the last hour</h3>
+            <% for (var i = 0; i < reviews.length; i++) { -%>
+              <% if (time - reviews[i].time < 3600000) { -%>
+                <div class="lili">
+                  <%= reviews[i].review%>
+                </div>
+              <% } -%>
+            <% } -%>
+        </div>
+
+      <% } %>
+      <% if(error !== null){ %>
+      	<p><%= error %></p>
+      <% } %>
+    </div>
+  </body>
+</html>
